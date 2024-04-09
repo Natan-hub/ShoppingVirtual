@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDCahmPDJILgzk6hMLYTiay8C65CWdY5Z4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>493533336389</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.loss.lojavirtual</string>
+	<key>PROJECT_ID</key>
+	<string>loja-virtual-52474</string>
+	<key>STORAGE_BUCKET</key>
+	<string>loja-virtual-52474.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:493533336389:ios:fb1e2a2f068c51a23e642c</string>
+</dict>
+</plist>
