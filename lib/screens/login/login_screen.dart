@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shoppe/models/user.dart';
+import 'package:flutter_shoppe/models/user_manager.dart';
 import 'package:flutter_shoppe/services/const.dart';
 import 'package:flutter_shoppe/validator/validator.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget with ValidacoesMixin {
    LoginScreen({super.key});
@@ -59,7 +62,12 @@ class LoginScreen extends StatelessWidget with ValidacoesMixin {
                   style: ElevatedButton.styleFrom(backgroundColor: primaryColor),
                   onPressed: () {
                     if(formKey.currentState!.validate()) {
-                      
+                      context.read<UserManager>().signIn(
+                        Usuario(
+                          email: emailController.text,
+                          password: passwordController.text,
+                        )
+                      );
                     }
                   },
                   child: const Text(

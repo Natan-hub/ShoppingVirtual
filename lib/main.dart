@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_shoppe/models/user_manager.dart';
 import 'package:flutter_shoppe/screens/base_screen.dart';
+import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 
@@ -19,15 +21,18 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Loja Virtual',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(elevation: 0)
+    return Provider(
+      create: (_) => UserManager(),
+      child: MaterialApp(
+        title: 'Loja Virtual',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+          appBarTheme: const AppBarTheme(elevation: 0)
+        ),
+        home: BaseScreen()
       ),
-      home: BaseScreen()
     );
   }
 }
